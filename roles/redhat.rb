@@ -1,7 +1,7 @@
-name "base"
-description "Base role applied to all nodes."
+name "redhat"
+description "Base role applied to redhat nodes."
 run_list(
-  "recipe[apt]",
+  "recipe[yum]",
   "recipe[chef-client::delete_validation]",
   "recipe[chef-client::service]",
   "recipe[mine]",
