@@ -1,11 +1,11 @@
 current_dir = File.dirname(__FILE__)
 log_level                :info
 log_location             STDOUT
-node_name                "jedipunkz"
-client_key               "#{current_dir}/jedipunkz.pem"
-validation_client_name   "jedipunkz-validator"
-validation_key           "#{current_dir}/jedipunkz-validator.pem"
-chef_server_url          "https://api.opscode.com/organizations/jedipunkz"
+node_name                'worker'
+client_key               '/Users/thirai/chef-repo/.chef/worker.pem'
+validation_client_name   'chef-validator'
+validation_key           '/Users/thirai/chef-repo/.chef/validation.pem'
+chef_server_url          'http://192.168.1.196:4000'
 cache_type               'BasicFile'
-cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
+cache_options( :path => '/Users/thirai/chef-repo/.chef/checksums' )
 cookbook_path            ["#{current_dir}/../cookbooks"]
